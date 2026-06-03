@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Community & support (Discord)
+    url: https://discord.gg/BZ2fnfsCVw
+    about: Questions, help, and general discussion happen here.
+  - name: 👾 Reddit — r/ConcordVoice
+    url: https://www.reddit.com/r/ConcordVoice/
+    about: News, feedback, and community threads.
+  - name: 🔐 Report a security vulnerability
+    url: https://github.com/Concord-Voice/.github/blob/main/SECURITY.md
+    about: Please disclose security issues privately — do not open a public issue.

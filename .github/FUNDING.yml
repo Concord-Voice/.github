@@ -1,0 +1,8 @@
+# Concord Voice — organization-wide funding links.
+# Renders a "Sponsor" button on any repository that doesn't define its own FUNDING file.
+# Kickstarter is not a natively supported platform key, so it goes under `custom`.
+
+custom:
+  - "https://www.concordvoice.com"
+  # TODO(Kickstarter): uncomment and paste the live campaign URL when it launches:
+  # - "https://www.kickstarter.com/projects/REPLACE-ME"
