@@ -3,6 +3,5 @@
 # Kickstarter is not a natively supported platform key, so it goes under `custom`.
 
 custom:
+  - "https://www.kickstarter.com/projects/concord-mark/concord-voice"  # pre-launch page (follow/notify until the campaign is live)
   - "https://www.concordvoice.com"
-  # TODO(Kickstarter): uncomment and paste the live campaign URL when it launches:
-  # - "https://www.kickstarter.com/projects/REPLACE-ME"

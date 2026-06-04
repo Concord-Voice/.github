@@ -17,6 +17,8 @@
 [![Desktop](https://img.shields.io/badge/Desktop-macOS%20%C2%B7%20Windows%20%C2%B7%20Linux-ffe13f?style=flat-square&labelColor=0d0821)](https://www.concordvoice.com)
 &nbsp;
 [![Status](https://img.shields.io/badge/Status-v0.1.0--Alpha-22c55e?style=flat-square&labelColor=0d0821)](https://www.concordvoice.com)
+&nbsp;
+[![Kickstarter — Coming soon](https://img.shields.io/badge/Kickstarter-Coming%20soon-05ce78?style=flat-square&labelColor=0d0821&logo=kickstarter&logoColor=white)](https://www.kickstarter.com/projects/concord-mark/concord-voice)
 
 **[Website](https://www.concordvoice.com)** · **[Discord](https://discord.gg/BZ2fnfsCVw)** · **[Reddit](https://www.reddit.com/r/ConcordVoice/)** · **[Bluesky](https://bsky.app/profile/concord-voice.bsky.social)** · **[X](https://x.com/Concord_Voice)**
 
@@ -39,12 +41,14 @@
 
 ## 🚀 Launching soon on Kickstarter
 
-We're building Concord Voice in the open — and bringing it to **Kickstarter** soon.
+We're building Concord Voice in the open — and bringing it to **Kickstarter**. Our pre-launch page is up: **follow it to get notified the moment we go live.**
 
-**[→ Get notified at concordvoice.com](https://www.concordvoice.com)** &nbsp;·&nbsp; **[Join us on Discord](https://discord.gg/BZ2fnfsCVw)**
+**[→ Follow us on Kickstarter](https://www.kickstarter.com/projects/concord-mark/concord-voice)** &nbsp;·&nbsp; **[Join us on Discord](https://discord.gg/BZ2fnfsCVw)**
 
-<!-- TODO(Kickstarter): when the campaign is live, replace the line above with:
-     **[→ Back us on Kickstarter](PASTE_LIVE_KICKSTARTER_URL_HERE)** -->
+<!-- TODO(Kickstarter launch): when the campaign goes LIVE, update three spots:
+     1. heading "🚀 Launching soon on Kickstarter" → "🚀 Back us on Kickstarter"
+     2. CTA "→ Follow us on Kickstarter" → "→ Back us on Kickstarter"
+     3. header badge "Kickstarter — Coming soon" → "Kickstarter — Live" -->
 
 ## 🗺️ Roadmap
 
