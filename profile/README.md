@@ -43,12 +43,27 @@
 
 We're building Concord Voice in the open — and bringing it to **Kickstarter**. Our pre-launch page is up: **follow it to get notified the moment we go live.**
 
+<div align="center">
+
+<a href="https://www.kickstarter.com/projects/concord-mark/concord-voice">
+  <img src="https://raw.githubusercontent.com/Concord-Voice/.github/main/profile/assets/ks-hero.png" alt="Concord Voice — coming soon on Kickstarter" width="820">
+</a>
+
+<p>
+  <a href="https://www.kickstarter.com/projects/concord-mark/concord-voice">
+    <img src="https://raw.githubusercontent.com/Concord-Voice/.github/main/profile/assets/kickstarter-logo.png" alt="Kickstarter" height="22">
+  </a>
+</p>
+
 **[→ Follow us on Kickstarter](https://www.kickstarter.com/projects/concord-mark/concord-voice)** &nbsp;·&nbsp; **[Join us on Discord](https://discord.gg/BZ2fnfsCVw)**
 
-<!-- TODO(Kickstarter launch): when the campaign goes LIVE, update three spots:
+</div>
+
+<!-- TODO(Kickstarter launch): when the campaign goes LIVE, update:
      1. heading "🚀 Launching soon on Kickstarter" → "🚀 Back us on Kickstarter"
      2. CTA "→ Follow us on Kickstarter" → "→ Back us on Kickstarter"
-     3. header badge "Kickstarter — Coming soon" → "Kickstarter — Live" -->
+     3. header badge "Kickstarter — Coming soon" → "Kickstarter — Live"
+     4. banner alt text "coming soon on Kickstarter" → "back us on Kickstarter" (the image itself is fine as-is) -->
 
 ## 🗺️ Roadmap
 
