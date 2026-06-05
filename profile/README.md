@@ -51,7 +51,7 @@ We're building Concord Voice in the open, and bringing it to **Kickstarter**. Ou
   </a>
 </p>
 
-**[Follow us on Kickstarter](https://www.kickstarter.com/projects/concord-mark/concord-voice)** &nbsp;·&nbsp; **[Join us on Discord](https://discord.gg/BZ2fnfsCVw)**
+**[Follow us on Kickstarter](https://www.kickstarter.com/projects/concord-mark/concord-voice)**
 
 </div>
 
