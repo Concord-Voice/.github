@@ -45,13 +45,9 @@ We're building Concord Voice in the open, and bringing it to **Kickstarter**. Ou
 
 <div align="center">
 
-<a href="https://www.kickstarter.com/projects/concord-mark/concord-voice">
-  <img src="https://raw.githubusercontent.com/Concord-Voice/.github/main/profile/assets/ks-hero.png" alt="Concord Voice on Kickstarter (coming soon)" width="820">
-</a>
-
 <p>
   <a href="https://www.kickstarter.com/projects/concord-mark/concord-voice">
-    <img src="https://raw.githubusercontent.com/Concord-Voice/.github/main/profile/assets/kickstarter-logo.png" alt="Kickstarter" height="22">
+    <img src="https://raw.githubusercontent.com/Concord-Voice/.github/main/profile/assets/kickstarter-logo.png" alt="Kickstarter" height="26">
   </a>
 </p>
 
@@ -62,8 +58,7 @@ We're building Concord Voice in the open, and bringing it to **Kickstarter**. Ou
 <!-- TODO(Kickstarter launch): when the campaign goes LIVE, update:
      1. heading "Launching soon on Kickstarter" to "Back us on Kickstarter"
      2. CTA "Follow us on Kickstarter" to "Back us on Kickstarter"
-     3. header badge: alt "Kickstarter: Coming soon" to "Kickstarter: Live"; URL "Coming%20soon" to "Live"
-     4. banner alt "(coming soon)" to "back us now" (the image itself is fine as-is) -->
+     3. header badge: alt "Kickstarter: Coming soon" to "Kickstarter: Live"; URL "Coming%20soon" to "Live" -->
 
 ## Roadmap
 
