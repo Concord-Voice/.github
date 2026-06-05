@@ -8,11 +8,11 @@
 
 ## Type of change
 
-- [ ] 🐞 Bug fix
-- [ ] ✨ Feature
-- [ ] 📝 Docs
-- [ ] ♻️ Refactor / chore
-- [ ] 🔐 Security
+- [ ] Bug fix
+- [ ] Feature
+- [ ] Docs
+- [ ] Refactor / chore
+- [ ] Security
 
 ## Checklist
 

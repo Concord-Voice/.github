@@ -1,4 +1,4 @@
-# Concord Voice — `.github`
+# Concord Voice: `.github`
 
 This repository holds **organization-wide GitHub defaults** for [Concord Voice](https://www.concordvoice.com).
 

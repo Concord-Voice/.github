@@ -33,9 +33,9 @@ This policy applies to all repositories under the [Concord Voice organization](h
 
 Concord Voice is engineered for defense in depth:
 
-- **End-to-end encryption** — AES-256-GCM with RSA-OAEP 4096-bit key wrapping and epoch-based key rotation
-- **Credential protection** — Argon2id password hashing; OS-keychain-backed storage on desktop
-- **Strong authentication** — multi-factor auth (TOTP + WebAuthn/passkeys)
-- **Access control** — role-based and scope-based permissions
+- **End-to-end encryption:** AES-256-GCM with RSA-OAEP 4096-bit key wrapping and epoch-based key rotation
+- **Credential protection:** Argon2id password hashing; OS-keychain-backed storage on desktop
+- **Strong authentication:** multi-factor auth (TOTP + WebAuthn/passkeys)
+- **Access control:** role-based and scope-based permissions
 
 Thank you for helping keep Concord Voice and its users safe.
