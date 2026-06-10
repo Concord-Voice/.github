@@ -1,1 +1,8 @@
 .DS_Store
+
+# claude code shared layer — skills/agents are committed real-file copies synced from the
+# dev-tooling Master (scripts/sync-shared.sh); Claude Code cannot load symlinked skills.
+# Everything else under .claude/ (local symlinks, session state, settings) stays untracked.
+.claude/*
+!.claude/skills/
+!.claude/agents/
