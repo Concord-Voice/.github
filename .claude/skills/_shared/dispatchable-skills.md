@@ -4,7 +4,7 @@ This file is the single source of truth for skills that `/issue-creation`, `/pr-
 
 **Dispatch authorization is mode-dependent** (modes are defined by the autonomy-framework design, Component D; that spec lives in the repo that owns autonomy policy and may not be present in every consumer repo):
 
-- **In-the-Loop mode:** dispatches at gated phases (2, 5, 7, 9) require approval; auto-dispatch elsewhere (3, 4, 6, 8)
+- **In-the-Loop mode:** dispatches at gated phases (2, 5, 7, 9) require approval; auto-dispatch elsewhere (1, 3, 4, 6, 8)
 - **On-the-Loop mode:** dispatches at gated phases (5, 9) require approval; auto-dispatch elsewhere
 - **Automated End-to-End mode:** full dispatch authority per the mode's gate matrix (only the Phase 9 merge gate remains)
 
