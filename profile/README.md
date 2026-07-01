@@ -5,7 +5,7 @@
 <div align="center">
 
 <a href="https://www.concordvoice.com">
-  <img src="https://raw.githubusercontent.com/Concord-Voice/.github/main/profile/assets/concord-hero.png" alt="Concord Voice: Own Your Voice" width="820">
+  <img src="https://raw.githubusercontent.com/Concord-Voice/.github/main/profile/assets/main-logo-hires.jpg" alt="Concord Voice: Own Your Voice" width="820">
 </a>
 
 ### Privacy-first, end-to-end encrypted voice, video &amp; chat. Hosted or self-hosted.
