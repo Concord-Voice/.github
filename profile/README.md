@@ -18,9 +18,8 @@
 &nbsp;
 [![Status](https://img.shields.io/badge/Status-v0.1.0--Alpha-22c55e?style=flat-square&labelColor=0d0821)](https://www.concordvoice.com)
 &nbsp;
-[![Kickstarter: Coming soon](https://img.shields.io/badge/Kickstarter-Coming%20soon-05ce78?style=flat-square&labelColor=0d0821&logo=kickstarter&logoColor=white)](https://www.kickstarter.com/projects/concord-mark/concord-voice)
 
-**[Website](https://www.concordvoice.com)** · **[Discord](https://discord.gg/BZ2fnfsCVw)** · **[Reddit](https://www.reddit.com/r/ConcordVoice/)** · **[Bluesky](https://bsky.app/profile/concord-voice.bsky.social)** · **[X](https://x.com/Concord_Voice)**
+**[Website](https://www.concordvoice.com)** · **[Reddit](https://www.reddit.com/r/ConcordVoice/)** · **[Bluesky](https://bsky.app/profile/concord-voice.bsky.social)** · **[X](https://x.com/Concord_Voice)**
 
 </div>
 
@@ -39,26 +38,7 @@
 - **Genuinely full-featured.** Server channels, direct messages, voice & video calls, screen sharing, roles & permissions, all on a [mediasoup](https://mediasoup.org/) WebRTC backbone.
 - **Cross-platform desktop.** Native macOS, Windows, and Linux clients today, with mobile on the roadmap.
 
-## Launching soon on Kickstarter
-
-We're building Concord Voice in the open, and bringing it to **Kickstarter**. Our pre-launch page is up: **follow it to get notified the moment we go live.**
-
-<div align="center">
-
-<p>
-  <a href="https://www.kickstarter.com/projects/concord-mark/concord-voice">
-    <img src="https://raw.githubusercontent.com/Concord-Voice/.github/main/profile/assets/kickstarter-logo.png" alt="Kickstarter" height="26">
-  </a>
-</p>
-
-**[Follow us on Kickstarter](https://www.kickstarter.com/projects/concord-mark/concord-voice)**
-
 </div>
-
-<!-- TODO(Kickstarter launch): when the campaign goes LIVE, update:
-     1. heading "Launching soon on Kickstarter" to "Back us on Kickstarter"
-     2. CTA "Follow us on Kickstarter" to "Back us on Kickstarter"
-     3. header badge: alt "Kickstarter: Coming soon" to "Kickstarter: Live"; URL "Coming%20soon" to "Live" -->
 
 ## Roadmap
 
@@ -81,7 +61,6 @@ Under the hood, Concord pairs a **Go** control plane with a Node/**mediasoup** W
 ## Connect with us
 
 - Web: [concordvoice.com](https://www.concordvoice.com)
-- Discord: [discord.gg/BZ2fnfsCVw](https://discord.gg/BZ2fnfsCVw)
 - Reddit: [r/ConcordVoice](https://www.reddit.com/r/ConcordVoice/)
 - Bluesky: [@concord-voice.bsky.social](https://bsky.app/profile/concord-voice.bsky.social)
 - X: [@Concord_Voice](https://x.com/Concord_Voice)
