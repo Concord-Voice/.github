@@ -16,7 +16,7 @@
 &nbsp;
 [![Desktop](https://img.shields.io/badge/Desktop-macOS%20%C2%B7%20Windows%20%C2%B7%20Linux-ffe13f?style=flat-square&labelColor=0d0821)](https://www.concordvoice.com)
 &nbsp;
-[![Status](https://img.shields.io/badge/Status-v0.1.0--Alpha-22c55e?style=flat-square&labelColor=0d0821)](https://www.concordvoice.com)
+[![Status](https://img.shields.io/badge/Status-v0.2--Beta-22c55e?style=flat-square&labelColor=0d0821)](https://www.concordvoice.com)
 &nbsp;
 
 **[Website](https://www.concordvoice.com)** · **[Reddit](https://www.reddit.com/r/ConcordVoice/)** · **[Bluesky](https://bsky.app/profile/concord-voice.bsky.social)** · **[X](https://x.com/Concord_Voice)**
