@@ -7,7 +7,7 @@ Thanks for your interest in contributing to [Concord Voice](https://www.concordv
 
 ## Ways to contribute right now
 
-- Join the conversation on [Discord](https://discord.gg/BZ2fnfsCVw) and [r/ConcordVoice](https://www.reddit.com/r/ConcordVoice/).
+- Join the conversation on [r/ConcordVoice](https://www.reddit.com/r/ConcordVoice/).
 - File bugs and share feature ideas through our issue templates (on any repository that's public to you).
 - Report security issues privately. See [SECURITY.md](SECURITY.md).
 - Back the project on Kickstarter and help us spread the word.
@@ -25,4 +25,4 @@ All participation in our spaces is governed by our [Code of Conduct](CODE_OF_CON
 
 ## Questions?
 
-Reach us at [contact-us@concordvoice.com](mailto:contact-us@concordvoice.com) or on [Discord](https://discord.gg/BZ2fnfsCVw).
+Reach us at [contact-us@concordvoice.com](mailto:contact-us@concordvoice.com) or on [r/ConcordVoice](https://www.reddit.com/r/ConcordVoice/).
