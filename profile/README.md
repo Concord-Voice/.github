@@ -57,6 +57,7 @@ Under the hood, Concord pairs a **Go** control plane with a Node/**mediasoup** W
 - Source-available today (CVSL 1.0 to AGPL 2030); public repositories arrive at beta.
 - [How to contribute](https://github.com/Concord-Voice/.github/blob/main/CONTRIBUTING.md)
 - [Security policy & responsible disclosure](https://github.com/Concord-Voice/.github/blob/main/SECURITY.md)
+- [How we use AI in development](https://github.com/Concord-Voice/.github/blob/main/AI_POLICY.md)
 
 ## Connect with us
 
