@@ -20,7 +20,7 @@ Organization-wide defaults for every Concord Voice repository.
 
 ## Introduction
 
-Concord Voice is a privacy-first place to talk with your friends, your community, or your team. It gives you voice calls, video, screen sharing, and chat. Your device encrypts each message before it leaves, so our servers hold only scrambled data that we cannot read. You can use our hosted service, or you can run the same software on your own hardware.
+Concord Voice is a privacy-first place to talk with your friends, your community, or your team. It gives you voice calls, video, screen sharing, and chat. Your device encrypts each message before it leaves, so our servers store your messages only as scrambled data that we cannot read. You can use our hosted service, or you can run the same software on your own hardware.
 
 This repository holds the files that GitHub shows across the whole Concord Voice organization.
 These include our public profile, the security policy, the code of conduct, and the contributing guide.
