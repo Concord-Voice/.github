@@ -4,10 +4,13 @@ Concord Voice builds privacy- and security-critical software. We take vulnerabil
 
 ## Supported Versions
 
-| Version | Supported |
-| ------- | --------- |
-| Latest 0.3.x release | Yes |
-| Older releases | No. Update to the latest release. |
+| Component | Supported |
+| :-- | :-- |
+| Desktop | Latest 0.3.x release |
+| Self-Hosted | Latest 0.3.x release |
+| Mobile (pre-alpha) | Latest 0.1.x build |
+| Hosted service | Current production |
+| Anything older | No. Update to the latest release. |
 
 **Note:** Concord Voice is in its v0.3.x pre-GA line, with v1.0 targeted for January 2027. Security fixes ship in the next release of the affected app (Desktop, Self-Hosted, or Mobile) and on the hosted service. Desktop apps update themselves.
 
@@ -98,11 +101,11 @@ Concord Voice is engineered for defense in depth.
 - **Strong authentication:** TOTP multi-factor with backup codes, and WebAuthn/FIDO2 security keys and passkeys.
 - **Recovery circles:** social recovery for account access.
 - **Token theft detection:** device binding with machine-ID verification.
-- **Session security:** short-lived JWT access tokens (15 minutes) and HttpOnly refresh cookies. With Remember Me, the refresh cookie rolls for 30 days; without it, the cookie lasts only for the browser or app session.
+- **Session security:** short-lived JWT access tokens (15 minutes) and HttpOnly refresh cookies. With Remember Me (the default, and always for single sign-on), the refresh cookie rolls for 30 days. Without it, the cookie lasts only for the browser or app session. Without Remember Me, the refresh token also expires 30 days after sign-in, even if the session stays open.
 - **Access control:** role-based and scope-based permissions.
 - **Rate limiting:** Redis-backed, per-IP and per-user.
 - **Injection defenses:** parameterized queries throughout; validation at every request boundary.
-- **Transport security:** TLS 1.3 required in production, with perfect forward secrecy.
+- **Transport security:** TLS 1.2 or 1.3 required in production, with ECDHE AEAD ciphers only (perfect forward secrecy).
 - **Static and dynamic analysis in CI:** CodeQL, Semgrep, ESLint, OSV-Scanner, govulncheck, OpenSSF Scorecard, and an API DAST pass, with results published to GitHub Code Scanning. A subset are merge-gated by branch rulesets.
 - **Secret detection:** detect-secrets, TruffleHog, and gitleaks in pre-commit, plus a CI secret-scanning gate.
 - **Dependency scanning:** Dependabot alerts, `npm audit`, and Go vulnerability database checks.
@@ -128,7 +131,7 @@ Concord Voice is engineered for defense in depth.
 
 **Transport**
 
-- TLS 1.3 required in production
+- TLS 1.2 or 1.3 required in production (ECDHE AEAD ciphers only)
 - Perfect forward secrecy
 
 **Password storage**
