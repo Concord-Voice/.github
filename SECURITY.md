@@ -105,7 +105,7 @@ Concord Voice is engineered for defense in depth.
 - **Access control:** role-based and scope-based permissions.
 - **Rate limiting:** Redis-backed, per-IP and per-user.
 - **Injection defenses:** parameterized queries throughout; validation at every request boundary.
-- **Transport security:** TLS 1.3 required in production, with perfect forward secrecy.
+- **Transport security:** TLS 1.2 or 1.3 required in production, with ECDHE AEAD ciphers only (perfect forward secrecy).
 - **Static and dynamic analysis in CI:** CodeQL, Semgrep, ESLint, OSV-Scanner, govulncheck, OpenSSF Scorecard, and an API DAST pass, with results published to GitHub Code Scanning. A subset are merge-gated by branch rulesets.
 - **Secret detection:** detect-secrets, TruffleHog, and gitleaks in pre-commit, plus a CI secret-scanning gate.
 - **Dependency scanning:** Dependabot alerts, `npm audit`, and Go vulnerability database checks.
@@ -131,7 +131,7 @@ Concord Voice is engineered for defense in depth.
 
 **Transport**
 
-- TLS 1.3 required in production
+- TLS 1.2 or 1.3 required in production (ECDHE AEAD ciphers only)
 - Perfect forward secrecy
 
 **Password storage**
