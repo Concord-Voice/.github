@@ -23,7 +23,7 @@ Organization-wide defaults for every Concord Voice repository.
 Concord Voice is a privacy-first place to talk with your friends, your community, or your team. It gives you voice calls, video, screen sharing, and chat. Your device encrypts each message before it leaves, so our servers store your messages only as scrambled data that we cannot read. You can use our hosted service, or you can run the same software on your own hardware.
 
 This repository holds the files that GitHub shows across the whole Concord Voice organization.
-These include our public profile, the security policy, the code of conduct, and the contributing guide.
+These include our public profile, the security policy, the code of conduct, the contributing and support guides, and the default issue forms.
 
 A repository that has its own copy of one of these files uses that copy instead.
 
@@ -39,9 +39,13 @@ This repository holds **organization-wide GitHub defaults** for [Concord Voice](
 | [`SECURITY.md`](SECURITY.md) | Default security & disclosure policy. |
 | [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) | Default code of conduct. |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | Default contributing guide. |
-| [`.github/FUNDING.yml`](.github/FUNDING.yml) | "Sponsor" links. |
+| [`SUPPORT.md`](SUPPORT.md) | Default "where to get help" page. |
+| [`AI_POLICY.md`](AI_POLICY.md) | How we use AI in development (linked, not a GitHub default). |
+| [`.github/FUNDING.yml`](.github/FUNDING.yml) | "Sponsor" button. |
 | [`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE) | Default issue forms. |
 | [`.github/PULL_REQUEST_TEMPLATE.md`](.github/PULL_REQUEST_TEMPLATE.md) | Default pull-request template. |
+| [`.github/workflows/sonarcloud.yml`](.github/workflows/sonarcloud.yml) | SonarCloud scan for this repository only (workflows are not inherited). |
+| [`.github/dependabot.yml`](.github/dependabot.yml) | Keeps this repository's pinned actions current. |
 
 > [!NOTE]
 > These files are **defaults**. Any repository in the organization that ships its own copy of a file overrides the one here. Editing files here changes the fallback for **every** repo that doesn't.

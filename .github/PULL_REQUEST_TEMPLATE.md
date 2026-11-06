@@ -20,6 +20,7 @@
 - [ ] Tests added/updated and passing
 - [ ] Docs updated where needed
 - [ ] No secrets, credentials, or personal data in the diff
+- [ ] Public files name no other comms products
 
 ## Screenshots / notes
 

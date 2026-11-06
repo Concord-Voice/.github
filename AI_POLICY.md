@@ -16,7 +16,8 @@ Concord Voice is built by a small team that uses AI coding assistants. This page
 | --- | --- |
 | Claude Code (Anthropic) | Main coding agent, in the terminal and the editor |
 | GitHub Copilot | Code completion and pull request review |
-| OpenAI Codex | Code generation and pull request review |
+| OpenAI Codex | Code generation, pull request review, and security review |
+| Gitar | Required pull request review on every repository |
 
 We also use automated reviewers and scanners on pull requests, such as SonarQube Cloud, CodeQL and Semgrep. Any new AI tool needs the project owner's written approval first. The request must describe how the tool handles data.
 

@@ -75,6 +75,7 @@
 
 Under the hood, Concord pairs a **Go** control plane with a Node/**mediasoup** WebRTC SFU, an **Electron · React · TypeScript** desktop app, and a **React Native** mobile app.
 
+- [Getting help](https://github.com/Concord-Voice/.github/blob/main/SUPPORT.md)
 - [How to contribute](https://github.com/Concord-Voice/.github/blob/main/CONTRIBUTING.md)
 - [Security policy & responsible disclosure](https://github.com/Concord-Voice/.github/blob/main/SECURITY.md)
 - [How we use AI in development](https://github.com/Concord-Voice/.github/blob/main/AI_POLICY.md)

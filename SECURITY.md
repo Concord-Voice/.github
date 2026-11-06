@@ -6,9 +6,10 @@ Concord Voice builds privacy- and security-critical software. We take vulnerabil
 
 | Version | Supported |
 | ------- | --------- |
-| 0.x.x   | Yes       |
+| Latest 0.3.x release | Yes |
+| Older releases | No. Update to the latest release. |
 
-**Note:** Concord Voice is in active development toward v0.2.0-Beta, with v1.0 targeted for January 2027. Security updates are provided for the current development release.
+**Note:** Concord Voice is in its v0.3.x pre-GA line, with v1.0 targeted for January 2027. Security fixes ship in the next release of the affected app (Desktop, Self-Hosted, or Mobile) and on the hosted service. Desktop apps update themselves.
 
 ## Reporting a Vulnerability
 
@@ -97,7 +98,7 @@ Concord Voice is engineered for defense in depth.
 - **Strong authentication:** TOTP multi-factor with backup codes, and WebAuthn/FIDO2 security keys and passkeys.
 - **Recovery circles:** social recovery for account access.
 - **Token theft detection:** device binding with machine-ID verification.
-- **Session security:** short-lived JWT access tokens (15 minutes) and HttpOnly refresh cookies (30 days, rolling).
+- **Session security:** short-lived JWT access tokens (15 minutes) and HttpOnly refresh cookies. With Remember Me, the refresh cookie rolls for 30 days; without it, the cookie lasts only for the browser or app session.
 - **Access control:** role-based and scope-based permissions.
 - **Rate limiting:** Redis-backed, per-IP and per-user.
 - **Injection defenses:** parameterized queries throughout; validation at every request boundary.
@@ -248,4 +249,4 @@ Thank you for helping keep Concord Voice and its users safe.
 
 ---
 
-**Last Updated:** 2026-08-20
+**Last Updated:** 2026-11-06
