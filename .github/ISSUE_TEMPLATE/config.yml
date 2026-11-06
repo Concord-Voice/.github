@@ -1,8 +1,14 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Reddit (r/ConcordVoice)
+  - name: Known Issues
+    url: https://github.com/Concord-Voice/Feedback/issues/39
+    about: Check whether we already know about your problem.
+  - name: Not sure where to file? Use Feedback
+    url: https://github.com/Concord-Voice/Feedback/issues/new/choose
+    about: The Feedback repository takes bug reports and feature requests for every Concord Voice app.
+  - name: Questions and community help (r/ConcordVoice)
     url: https://www.reddit.com/r/ConcordVoice/
-    about: Questions, help, news, feedback, and community threads.
+    about: Ask questions, get help, and talk with other users.
   - name: Report a security vulnerability
     url: https://github.com/Concord-Voice/.github/blob/main/SECURITY.md
-    about: Please disclose security issues privately. Do not open a public issue.
+    about: Never file security problems publicly. Email security@concordvoice.com instead.

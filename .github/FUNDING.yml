@@ -1,7 +1,6 @@
-# Concord Voice — organization-wide funding links.
-# Renders a "Sponsor" button on any repository that doesn't define its own FUNDING file.
-# Kickstarter is not a natively supported platform key, so it goes under `custom`.
+# Concord Voice: organization-wide "Sponsor" button, shown on any repository
+# without its own FUNDING file. The Kickstarter campaign was retired on
+# 2026-07-26; a paid plan is now the way to support the project.
 
 custom:
-  - "https://www.kickstarter.com/projects/concord-mark/concord-voice"  # pre-launch page (follow/notify until the campaign is live)
-  - "https://www.concordvoice.com"
+  - "https://www.concordvoice.com/pricing"
