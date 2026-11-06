@@ -3,12 +3,12 @@
 Thanks for your interest in contributing to [Concord Voice](https://www.concordvoice.com)!
 
 > [!NOTE]
-> Concord Voice is in **alpha**, and most repositories are currently **private**. They open to the public as we reach **beta** (v0.2.0). This guide covers how we work across the organization; a repository's own `CONTRIBUTING.md` overrides it where present.
+> The app repositories ([Desktop](https://github.com/Concord-Voice/Desktop), [Self-Hosted](https://github.com/Concord-Voice/Self-Hosted), and [Mobile](https://github.com/Concord-Voice/Mobile)) are public. The hosted service and release operations stay private. This guide covers how we work across the organization; a repository's own `CONTRIBUTING.md` overrides it where present.
 
 ## Ways to contribute right now
 
 - Join the conversation on [r/ConcordVoice](https://www.reddit.com/r/ConcordVoice/).
-- File bugs and share feature ideas through our issue templates (on any repository that's public to you).
+- File bugs and share feature ideas in the [Feedback repository](https://github.com/Concord-Voice/Feedback). Check the [Known Issues list](https://github.com/Concord-Voice/Feedback/issues/39) first.
 - Report security issues privately. See [SECURITY.md](SECURITY.md).
 - Back the project on Kickstarter and help us spread the word.
 
