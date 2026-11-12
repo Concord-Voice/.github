@@ -10,6 +10,7 @@
 [![AI Code Assurance](https://sonarcloud.io/api/project_badges/ai_code_assurance?project=Concord-Voice_.github)](https://sonarcloud.io/summary/new_code?id=Concord-Voice_.github)
 [![visibility](https://img.shields.io/badge/visibility-public-success)](https://github.com/Concord-Voice)
 [![security](https://img.shields.io/badge/security-policy-green)](./SECURITY.md)
+
 [![SonarQube Cloud](https://sonarcloud.io/images/project_badges/sonarcloud-dark.svg)](https://sonarcloud.io/summary/new_code?id=Concord-Voice_.github)
 
 Organization-wide defaults for every Concord Voice repository.
