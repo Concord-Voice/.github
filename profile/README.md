@@ -90,6 +90,10 @@ Under the hood, Concord pairs a **Go** control plane with a Node/**mediasoup** W
 - TikTok: [@concord_voice](https://www.tiktok.com/@concord_voice)
 - Email: [contact-us@concordvoice.com](mailto:contact-us@concordvoice.com) · security: [security@concordvoice.com](mailto:security@concordvoice.com)
 
+### Artwork and Graphic Design 
+Special thanks to @OnaTofu for artwork and design. All credit goes to them!
+Find them on Bluesky: [@leonar.bsky.social](https://bsky.app/profile/leonar.bsky.social)
+
 ---
 
 <div align="center">
