@@ -91,7 +91,7 @@ Under the hood, Concord pairs a **Go** control plane with a Node/**mediasoup** W
 - Email: [contact-us@concordvoice.com](mailto:contact-us@concordvoice.com) · security: [security@concordvoice.com](mailto:security@concordvoice.com)
 
 ### Artwork and Graphic Design 
-Special thanks to @OnaTofu for artwork and design. All credit goes to them!
+Special thanks to [@OnaTofu](https://github.com/OnaTofu) for artwork and design. All credit goes to them!
 Find them on Bluesky: [@leonar.bsky.social](https://bsky.app/profile/leonar.bsky.social)
 
 ---
