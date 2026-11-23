@@ -21,6 +21,8 @@
 
 **[Website](https://www.concordvoice.com)** · **[Reddit](https://www.reddit.com/r/ConcordVoice/)** · **[Bluesky](https://bsky.app/profile/concord-voice.bsky.social)** · **[X](https://x.com/Concord_Voice)**
 
+[![sponsor](https://img.shields.io/badge/sponsor-Concord--Voice-pink?logo=github-sponsors)](https://github.com/sponsors/Concord-Voice)
+
 </div>
 
 ---
