@@ -1,57 +1,73 @@
 ---
 name: review-pr
 description: Comprehensive PR review checking security, tests, quality, and conventions
-argument-hint: [pr-number]
+argument-hint: "[pr-number or target PR URL]"
 disable-model-invocation: true
 allowed-tools:
   - Bash(gh pr *)
   - Bash(gh api *)
-  - Bash(git rev-parse *)
-  - Bash(cat *)
   - Read
   - Grep
   - Glob
 ---
 
-Review PR #$0 against this repository's standards.
+Review the PR identified by the invocation argument `$ARGUMENTS` against this repository's standards.
 
 ## Review Steps
 
-Use a positive decimal PR number for `Concord-Voice/.github`. A full `https://github.com/Concord-Voice/.github/pull/NUMBER` URL identifies the same target. Validate the argument before constructing commands and use only the extracted number as `PR_NUMBER`. A fork may supply the head branch. The target is always the base repository.
+Treat the entire argument as data in the host. Match it against this whole-string grammar before calling Bash:
 
-1. **Fetch PR context** — use `gh pr view "$PR_NUMBER" --repo github.com/Concord-Voice/.github` and `gh pr diff "$PR_NUMBER" --repo github.com/Concord-Voice/.github` to understand the change
+```regex
+^(?:([1-9][0-9]*)|https://github\.com/Concord-Voice/\.github/pull/([1-9][0-9]*)/?)$
+```
+
+Use only the digits in the matching capture group as the literal `NUMBER` in the commands below. Reject other inputs. Never put the original argument in a shell command. For example, `/review-pr 15` and `/review-pr https://github.com/Concord-Voice/.github/pull/15` both run `gh pr view 15 --repo github.com/Concord-Voice/.github`. Each command runs independently.
+
+1. **Fetch PR context** — use `gh pr view NUMBER --repo github.com/Concord-Voice/.github` and `gh pr diff NUMBER --repo github.com/Concord-Voice/.github` to understand the change
 2. **Categorize** — is this a feature, fix, refactor, chore, or docs change?
 
 ## Agent Dispatch (Priority 0 — runs first)
 
-Read the review policy as JSON at the PR's exact base commit. Run this block with the validated `PR_NUMBER`. Stop if GitHub cannot establish the base or read its Git data.
+Get the base Git object ID from the same PR. The target repository is fixed even if the head comes from a fork. Stop on any command error.
 
 ```bash
-set -e
-[[ ${PR_NUMBER:-} =~ ^[1-9][0-9]*$ ]] || exit 1
-base_oid=$(gh api --hostname github.com "repos/Concord-Voice/.github/pulls/$PR_NUMBER" \
-  --jq 'select(.base.repo.full_name == "Concord-Voice/.github") | .base.sha')
-[[ $base_oid =~ ^[0-9a-f]{40}$ ]] || exit 1
+gh pr view NUMBER --repo github.com/Concord-Voice/.github --json number,url,baseRefOid --jq '
+  if .number == NUMBER and .url == ("https://github.com/Concord-Voice/.github/pull/" + (.number | tostring))
+     and (.baseRefOid | test("^[0-9a-f]{40}$"))
+  then .baseRefOid else error("cannot verify PR base") end'
+```
 
-gh api --hostname github.com graphql -f base="$base_oid" -f path="$base_oid:.claude/repo-config.json" \
+Use the returned 40 lowercase hex digits as the literal `BASE_OID` in both arguments of the next command. Read the policy from that commit as JSON.
+
+```bash
+gh api --hostname github.com graphql -f base=BASE_OID -f path=BASE_OID:.claude/repo-config.json \
   -f query='query($base: GitObjectID!, $path: String!) {
     repository(owner: "Concord-Voice", name: ".github") {
       base: object(oid: $base) { __typename }
       config: object(expression: $path) { __typename ... on Blob { isBinary isTruncated text } }
     }
   }' --jq '
+    def agent: type == "string" and test("^[^[:space:]]+$");
+    def pattern: type == "object" and (.agent | agent)
+      and (.glob | type == "string" and length > 0 and (test("[\\t\\r\\n]") | not));
     .data.repository |
     if .base.__typename != "Commit" then error("base commit unavailable")
     elif .config == null then {}
     elif .config.__typename != "Blob" or .config.isBinary or .config.isTruncated or .config.text == null
       then error("review configuration is unreadable")
-    else (try (.config.text | fromjson) catch {}) end |
-    (try .review_agents.base catch null) as $base |
-    (try .review_agents.patterns catch null) as $patterns |
-    {base: (if ($base | type) == "array" then $base else ["security-reviewer","code-reviewer","docs-reviewer"] end),
-     patterns: (if ($patterns | type) == "array" then $patterns else [] end)}'
+    else (.config.text | fromjson) end |
+    if type != "object" then error("review configuration must be an object") end |
+    if has("review_agents") then .review_agents else {} end |
+    if type != "object" then error("review_agents must be an object") end |
+    if has("base") and (.base | type != "array" or (all(.[]; agent) | not))
+      then error("invalid review_agents.base") end |
+    if has("patterns") and (.patterns | type != "array" or (all(.[]; pattern) | not))
+      then error("invalid review_agents.patterns") end |
+    {base: (.base // ["security-reviewer","code-reviewer","docs-reviewer"]), patterns: (.patterns // [])}'
+```
 
-gh pr diff "$PR_NUMBER" --repo github.com/Concord-Voice/.github --name-only
+```bash
+gh pr diff NUMBER --repo github.com/Concord-Voice/.github --name-only
 ```
 
 ### Base agents (always dispatched)
