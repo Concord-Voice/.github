@@ -17,50 +17,50 @@ Review PR #$0 against this repository's standards.
 
 ## Review Steps
 
-1. **Fetch PR context** — use `gh pr view $0` and `gh pr diff $0` to understand the change
+Use a positive decimal PR number for `Concord-Voice/.github`. A full `https://github.com/Concord-Voice/.github/pull/NUMBER` URL identifies the same target. Validate the argument before constructing commands and use only the extracted number as `PR_NUMBER`. A fork may supply the head branch. The target is always the base repository.
+
+1. **Fetch PR context** — use `gh pr view "$PR_NUMBER" --repo github.com/Concord-Voice/.github` and `gh pr diff "$PR_NUMBER" --repo github.com/Concord-Voice/.github` to understand the change
 2. **Categorize** — is this a feature, fix, refactor, chore, or docs change?
 
 ## Agent Dispatch (Priority 0 — runs first)
 
-Source the repo config helper, then fetch changed files:
+Read the review policy as JSON at the PR's exact base commit. Run this block with the validated `PR_NUMBER`. Stop if GitHub cannot establish the base or read its Git data.
 
 ```bash
-# Source the repo-config helper if present; otherwise fall back to documented defaults
-# so the skill still runs in repos without scripts/repo-config.sh (e.g. thin consumer repos).
-RC="$(git rev-parse --show-toplevel)/scripts/repo-config.sh"
-if [ -f "$RC" ]; then
-  source "$RC"
-else
-  rc_get() { echo "$2"; }   # no config → return the provided default
-  rc_has() { return 1; }    # no config → no keys present
-fi
-gh pr diff $0 --name-only > /tmp/review-pr-changed-files.txt
-cat /tmp/review-pr-changed-files.txt
+set -e
+[[ ${PR_NUMBER:-} =~ ^[1-9][0-9]*$ ]] || exit 1
+base_oid=$(gh api --hostname github.com "repos/Concord-Voice/.github/pulls/$PR_NUMBER" \
+  --jq 'select(.base.repo.full_name == "Concord-Voice/.github") | .base.sha')
+[[ $base_oid =~ ^[0-9a-f]{40}$ ]] || exit 1
+
+gh api --hostname github.com graphql -f base="$base_oid" -f path="$base_oid:.claude/repo-config.json" \
+  -f query='query($base: GitObjectID!, $path: String!) {
+    repository(owner: "Concord-Voice", name: ".github") {
+      base: object(oid: $base) { __typename }
+      config: object(expression: $path) { __typename ... on Blob { isBinary isTruncated text } }
+    }
+  }' --jq '
+    .data.repository |
+    if .base.__typename != "Commit" then error("base commit unavailable")
+    elif .config == null then {}
+    elif .config.__typename != "Blob" or .config.isBinary or .config.isTruncated or .config.text == null
+      then error("review configuration is unreadable")
+    else (try (.config.text | fromjson) catch {}) end |
+    (try .review_agents.base catch null) as $base |
+    (try .review_agents.patterns catch null) as $patterns |
+    {base: (if ($base | type) == "array" then $base else ["security-reviewer","code-reviewer","docs-reviewer"] end),
+     patterns: (if ($patterns | type) == "array" then $patterns else [] end)}'
+
+gh pr diff "$PR_NUMBER" --repo github.com/Concord-Voice/.github --name-only
 ```
 
 ### Base agents (always dispatched)
 
-Read the base agent list from config (defaults to `security-reviewer`, `code-reviewer`, and `docs-reviewer` when `.review_agents.base` is absent):
-
-```bash
-BASE_AGENTS=$(rc_get '.review_agents.base | join(" ")' "security-reviewer code-reviewer docs-reviewer")
-```
-
-Dispatch every agent named in `$BASE_AGENTS` in parallel.
+Dispatch every agent in the returned `base` list in parallel. The defaults are `security-reviewer`, `code-reviewer`, and `docs-reviewer`.
 
 ### Pattern-triggered agents (dispatched when a changed file matches)
 
-Read the pattern table from config:
-
-```bash
-# Each entry is {glob, agent}; absent → empty list, no pattern agents dispatched
-rc_has '.review_agents.patterns' && \
-  rc_get '.review_agents.patterns[] | "\(.glob)\t\(.agent)"' ''
-```
-
-For each `{glob, agent}` entry returned, check whether any line in `/tmp/review-pr-changed-files.txt` matches the glob (use `grep -q` or shell globbing). Collect the set of agents whose glob matched, then dispatch each **distinct** agent at most once, in parallel alongside the base agents — multiple patterns may map to the same agent (e.g. several `rbac-reviewer` globs), but it must run only once per review (de-dupe by agent name; no duplicate dispatch).
-
-When `.review_agents` is absent from the repo's config, only the three base defaults above are dispatched — no Alpha-specific or project-specific agents are named here.
+For each `{glob, agent}` in `patterns`, match the glob against the changed filenames from the same PR. Dispatch each distinct matching agent only once, alongside the base agents. An absent pattern list adds no agents.
 
 Include each agent's findings under the appropriate Priority section below.
 
