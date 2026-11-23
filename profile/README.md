@@ -21,6 +21,8 @@
 
 **[Website](https://www.concordvoice.com)** · **[Reddit](https://www.reddit.com/r/ConcordVoice/)** · **[Bluesky](https://bsky.app/profile/concord-voice.bsky.social)** · **[X](https://x.com/Concord_Voice)**
 
+[![sponsor](https://img.shields.io/badge/sponsor-Concord--Voice-pink?logo=github-sponsors)](https://github.com/sponsors/Concord-Voice)
+
 </div>
 
 ---
@@ -93,6 +95,13 @@ Under the hood, Concord pairs a **Go** control plane with a Node/**mediasoup** W
 ### Artwork and Graphic Design 
 Special thanks to [@OnaTofu](https://github.com/OnaTofu) for artwork and design. All credit goes to them!
 Find them on Bluesky: [@leonar.bsky.social](https://bsky.app/profile/leonar.bsky.social)
+
+## Sponsoring
+
+You can support Concord Voice development directly through GitHub Sponsors.
+While the hosted network offers personal user and community server subscriptions, GitHub Sponsorship gives supporters and self-hosters an independent way to support ongoing development and maintenance without paying into the Hosted subscription services.
+
+To sponsor the project, visit the [Concord Voice GitHub Sponsors page](https://github.com/sponsors/Concord-Voice) or click the **Sponsor** button at the top of this repository.
 
 ---
 
