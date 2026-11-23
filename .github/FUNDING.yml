@@ -1,6 +1,7 @@
 # Concord Voice: organization-wide "Sponsor" button, shown on any repository
-# without its own FUNDING file. The Kickstarter campaign was retired on
-# 2026-07-26; a paid plan is now the way to support the project.
+# without its own FUNDING file.
 
+github:
+  - Concord-Voice
 custom:
   - "https://www.concordvoice.com/pricing"
